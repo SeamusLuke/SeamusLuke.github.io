@@ -1,0 +1,43 @@
+:root {
+  --bg: #fdfdfb;
+  --text: #222;
+  --muted: #666;
+  --accent: #1a4f8b;
+  --rule: #ddd;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181a;
+    --text: #e4e4e4;
+    --muted: #9a9a9a;
+    --accent: #8ab4f0;
+    --rule: #333;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 Georgia, "Times New Roman", serif;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+header { border-bottom: 1px solid var(--rule); margin-bottom: 2rem; padding: 1.5rem 0 1rem; }
+.site-title { font-size: 1.6rem; color: var(--text); text-decoration: none; }
+nav { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-family: system-ui, sans-serif; font-size: .95rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+
+a { color: var(--accent); }
+h2 { font-size: 1.25rem; margin: 2.5rem 0 1rem; text-transform: uppercase; letter-spacing: .05em; }
+h3 { font-size: 1.1rem; margin: 2rem 0 .25rem; }
+.authors, .venue { margin: 0; color: var(--muted); font-size: .95rem; }
+.award { margin: .25rem 0 0; font-style: italic; font-size: .95rem; }
+.abstract { text-align: justify; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+.photo { float: right; width: 40%; max-width: 280px; margin: 0 0 1rem 1.5rem; border-radius: 4px; }
+@media (max-width: 560px) { .photo { float: none; display: block; width: 60%; margin: 0 auto 1.5rem; } }
+
+footer { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; color: var(--muted); font-size: .85rem; clear: both; }
